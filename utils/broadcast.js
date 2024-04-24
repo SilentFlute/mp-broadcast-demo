@@ -44,4 +44,5 @@ const broadcast = {
   },
   data: {}
 }
-module.exports = broadcast
+
+export default broadcast

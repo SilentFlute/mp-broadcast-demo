@@ -1,8 +1,10 @@
-const broadcast = require('./utils/broadcast');
+import broadcast from './utils/broadcast';
+import getData from './api/getData';
 
 App({
   broadcast,
-  onLaunch() {
-    broadcast.fire('demo-event', { a: 1 })
+  async onLaunch() {
+    const res = await getData();
+    broadcast.fire('demo-event', res)
   },
 })
